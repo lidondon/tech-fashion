@@ -1,3 +1,22 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.logo {
+	margin-bottom: 10px;
+	display: none;
+}
+
+.up_color {
+	color: #84c1ff;
+	position: absolute;
+	bottom: 0px;
+	font-size: 72px;
+	background: #ffd2d2
+}
+
+.down_color {
+	color: #ffd2d2;
+	font-size: 72px;
+	background: #84c1ff
+}

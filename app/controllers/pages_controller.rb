@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+  def portal
+  end
+
   def home
   end
 
@@ -7,4 +10,6 @@ class PagesController < ApplicationController
 
   def exhibition
   end
+
+
 end
