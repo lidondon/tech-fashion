@@ -8,6 +8,21 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body >
+    <%= image_tag("logo.png", size: 7 * 7, class: 'logo') %>
+    <nav class="navbar navbar-default" style="margin:10px">
+      <div class="container-fluid">
+	     <div class="navbar-header">
+	     	<a class="navbar-brand" style="color:#352065; " href="<%= root_path %>">TECH INDUSTRIAL CO., LTD</a>
+	     </div>
+	     <ul class="nav navbar-nav navbar-right">
+	     	<%= nav_li :Home, home_path %>
+	     	<%= nav_li :Product, product_path %>
+	     	<%= nav_li :Exhibition, exhibition_path %>
+	     	<%= nav_li :About, about_path %>
+	     	<%= nav_li :Contact, contact_path %>
+	     </ul>
+	   </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

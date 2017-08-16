@@ -1,2 +1,6 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render 'carousel' %>
+<label class='description'>
+	TECH offers not only products and servcies <br/>but the satisfaction and reliability
+</label>
+<%= render 'category_gallery', columns: get_category_gallery_columns(@products.count) %>
+<%= render 'home_bottom' %>

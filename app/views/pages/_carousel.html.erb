@@ -1,0 +1,41 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#myCarousel').carousel({
+			interval: 3000
+		})
+	});
+</script>
+
+<div style="margin-right:10px; margin-left:10px">	
+	<div id="myCarousel" class="carousel slide" style="margin-top:-10px;">
+		<!-- 輪播（Carousel）指標 -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+		</ol>   
+		<!-- 輪播（Carousel）項目 -->
+		<div class="carousel-inner" style="height:300px">
+			<div class="item active">
+		      <%= image_tag("carousel-1.png", class: 'carousel') %>
+			</div>
+	    	<div class="item">
+	    		<%= image_tag("carousel-2.png", class: 'carousel') %>
+	    	</div>
+	     <div class="item">
+	     	<%= image_tag("carousel-3.png", class: 'carousel') %>
+	   	</div>
+	   	<div class="item">
+	     	<%= image_tag("carousel-4.png", class: 'carousel') %>
+	   	</div>
+		</div>
+		<!-- 輪播（Carousel）導航 -->
+		<a class="carousel-control left" href="#myCarousel" 
+	   	data-slide="prev">
+		</a>
+		<a class="carousel-control right" href="#myCarousel" 
+	     data-slide="next">
+		</a>
+	</div>
+</div>

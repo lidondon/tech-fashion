@@ -1,0 +1,12 @@
+<% if notice %>
+	<%= notice %>
+<% end %>
+<%= form_for @product do |f| %>
+	name: <%= f.text_field :name %>
+	catagory: <%= f.collection_select :category_id, Category.all, :id, :name %>
+	number: <%= f.text_field :number %>
+	size: <%= f.text_field :size %>
+	description: <%= f.text_field :description %>
+	<%= f.file_field :image, multiple: true, name: "product_photos[image][]"%>
+	<%= f.submit "送出" %>
+<% end %>

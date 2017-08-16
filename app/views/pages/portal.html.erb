@@ -1,7 +1,3 @@
-<!-- <table style="heght: 100%">
-	<tr style="heght: 50%; background: yellow"></tr>
-	
-</table> -->
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('img').fadeIn(2000, show);
@@ -9,14 +5,16 @@
 
 	function show() {
 		$('label#labUp').slideDown("slow");
-		$('label#labDown').slideDown("slow");
+		$('label#labDown').slideDown("slow", function() {
+			setTimeout(function() { window.location.href = '/home'; }, 1000);
+		});
 	}
 
 
 </script>
 <div class="container-fluid" style="height:50vmin; background:#ffd2d2; position:relative;">
 	<div style="display:inline; position:absolute; bottom:0px; margin-left: 30%;">
-		<%= image_tag("logo.png", size: 10*10, class: 'logo') %>
+		<%= image_tag("logo.png", size: 10*10, class: 'portal_logo') %>
 		<label id="labUp" style="margin-left:10px; display:none; vertical-align: bottom;" class="up_color">TECH</label>
 	</div>
 	<!-- <div class="row">

@@ -1,0 +1,12 @@
+<h1>Products#show</h1>
+<%= @product.name %>
+<%= @product.category %>
+<%= @product.number %>
+<%= @product.size %><br /> 
+<%= @product.description %>
+<br />
+<% @product.product_photos.each do |photo| %>
+	<%= photo.image_url(:thumb) %>
+	<%= image_tag photo.image_url(:thumb).to_s %>
+	<br/>
+<% end %>
