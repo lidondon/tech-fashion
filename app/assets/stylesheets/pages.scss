@@ -47,6 +47,7 @@ img.thumbnail {
 
 div.bottom {
 	background-image: url('/assets/home_bottom.jpg');
+	background-image: asset_url('home_bottom.jpg');
 	background-attachment: fixed;
 	height: 250px; 
 	margin: 10px; 
