@@ -1,15 +1,17 @@
 <% i = 0 %>
 <div class="container">
-	<% columns.each do |column| %>
-		<div class="row row-eq-height">
-			<% column.times.each do %>
-				<div class=<%= "col-md-#{12 / column}" %> />
-					<%= render 'product_item', product: @products[i] %>
-					<% i += 1 %>
-				</div>
-			<% end %>
-		</div>
-		<br />
+	<% if columns != nil %>
+		<% columns.each do |column| %>
+			<div class="row row-eq-height">
+				<% column.times.each do %>
+					<div class=<%= "col-md-#{12 / column}" %> />
+						<%= render 'product_item', product: @products[i] %>
+						<% i += 1 %>
+					</div>
+				<% end %>
+			</div>
+			<br />
+		<% end %>
 	<% end %>
 
 </div>

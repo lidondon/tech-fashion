@@ -6,6 +6,14 @@ module PagesHelper
 
 	def get_category_gallery_columns count
 		case count
+		when 1
+			[1]
+		when 2
+			[2]
+		when 3
+			[3]
+		when 4
+			[2, 2]
 		when 5
 			[2, 3]
 		when 6
