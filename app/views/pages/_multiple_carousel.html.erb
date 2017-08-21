@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+     	<div class="carousel slide multi-item-carousel" id="theCarousel">
+				<div class="carousel-inner">
+        		<% products.count.times.each do |i| %>
+		        	<div class="<%= multiple_carousel_item_class(i) %>">
+		        		<% items = multiple_carousel_items(products, i) %>
+		        		<% items.each do |item|%>
+		        			<div click="set_product_id(&#39;#{products[index].id}&#39;)" >
+		        				<%= item %>
+		        			</div>
+		        		<% end %>
+		        	</div>
+        		<% end %>
+        	</div>
+			</div>
+     	<a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+     	<a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+		</div>
+	</div>
+</div>

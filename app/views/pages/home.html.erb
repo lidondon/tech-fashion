@@ -2,5 +2,5 @@
 <label class='description'>
 	TECH offers not only products and servcies <br/>but the satisfaction and reliability
 </label>
-<%= render 'category_gallery', columns: get_category_gallery_columns(@products.count) %>
+<%= render 'category_gallery', columns: category_gallery_columns(@products.count) %>
 <%= render 'home_bottom' %>

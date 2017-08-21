@@ -1,0 +1,20 @@
+<div class="container">
+	<% if @products != nil %>
+		<% (@products.count / 4 + 1).times.each do |row| %>
+			<div class="row row-eq-height">
+				<% 4.times.each do |column| %>
+					<% index = row * 4 + column %>
+					<% if index < @products.count %>
+						<div class="col-md-3 col-xs-3" data-toggle='modal' data-target='#productModal' data-name="<%= @products[index].name %>"
+							data-size="<%= @products[index].size %>" data-number="<%= @products[index].number %>" 
+							data-description="<%= @products[index].description %>" data-photo="<%= @products[index].product_photos[0].image_url %>" />
+							<%= render 'category_product_item', product: @products[index], title: @products[index].name %>
+						</div>
+					<% end %>
+				<% end %>
+			</div>
+			<br />
+		<% end %>
+	<% end %>
+</div>
+<%= render 'product_modal' %>

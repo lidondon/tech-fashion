@@ -33,9 +33,9 @@
 label.description {
 	color:#352065; 
 	font-size: 36px; 
-	font-weight:bold;
+	font-weight: bold;
 	width: 100%;
-	text-align:center;
+	text-align: center;
 	margin: 20px;
 }
 
@@ -53,3 +53,59 @@ div.bottom {
 	margin: 10px; 
 	background-size: cover;
 }
+
+img.exhibition {
+	width: 90%;
+	height: 65%;
+	display: block;
+	margin: auto;
+}
+
+img.about {
+	width: 90%;
+	display: block;
+	margin: auto;
+}
+
+
+
+
+
+/* override position and transform in 3.3.x */
+.multi-item-carousel {
+	.carousel-inner {
+		> .item {
+			transition: 500ms ease-in-out left;
+		}
+		.active {
+     	&.left{
+			left:-33%;
+     }
+     &.right{
+     	left:33%;
+     }
+	}
+	.next {
+		left: 33%;
+	}
+	.prev{
+		left: -33%;
+	}
+
+	@media all and (transform-3d), (-webkit-transform-3d) {
+		> .item {
+        // use your favourite prefixer here
+        transition: 500ms ease-in-out left;
+        transition: 500ms ease-in-out all;
+        backface-visibility: visible;
+        transform: none!important;
+			}
+		}
+	}
+	.carouse-control {
+		&.left, &.right {
+			background-image: none;
+		}
+  }
+}
+

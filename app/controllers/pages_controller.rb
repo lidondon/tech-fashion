@@ -5,10 +5,12 @@ class PagesController < ApplicationController
 
   def home
   		@products = get_all_category_random_product
-
   end
 
   def product
+  		@categorys = Category.all
+  		@selected_category = params[:category_id] == nil ? @categorys[0] : Category.find(params[:category_id])
+  		@products = @selected_category.products
   end
 
   def about
@@ -16,6 +18,14 @@ class PagesController < ApplicationController
 
   def exhibition
   end
+
+  def contact
+  		
+  end
+
+
+
+
 
   private 
 

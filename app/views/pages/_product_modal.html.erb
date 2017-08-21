@@ -1,0 +1,43 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('div[data-toggle=modal]').click(function () {
+			var name = '';
+			var size = '';
+			var number = '';
+			var description = '';
+			var photo = '';
+			if (typeof $(this).data('name') !== 'undefined') {
+	     	name = $(this).data('name');
+	     	size = $(this).data('size');
+	     	number = $(this).data('number');
+	     	description = $(this).data('description');
+	     	photo = $(this).data('photo');
+			}
+			document.getElementById('name').innerHTML = '&nbsp;&nbsp;Name: &nbsp;' + name;
+			document.getElementById('size').innerHTML = '&nbsp;&nbsp;Size: &nbsp;' + size;
+			document.getElementById('number').innerHTML = number;
+			document.getElementById('description').innerHTML = '&nbsp;&nbsp;Description: &nbsp;' + description;
+			document.getElementById('photo').src = photo;
+	  })
+	});
+</script>
+
+<!-- <input type="text" name="my_element_id" id="my_element_id"> -->
+<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+     	<div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 class="modal-title" id="number" />
+        </div>
+        <div class="modal-body" style="height:300px">
+        	<img class="thumbnail" id="photo" style="width:250px; height:250px; display:block; float:left">
+        	<div style="">
+					<h4 id="name" />
+					<h4 id="size" />
+					<h4 id="description" />
+				</div>
+        </div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
